@@ -189,7 +189,7 @@ def process_attack(message):
 
 def run_attack(target, port, attack_time, sent_message):
     try:
-        full_command = f"./soul {target} {port} {attack_time}"
+        full_command = f"./binary {target} {port} {attack_time} 70"
         subprocess.run(full_command, shell=True)
 
         sent_message.time_remaining = 0
